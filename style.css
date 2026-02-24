@@ -1,0 +1,88 @@
+:root {
+    --primary: #0a192f;
+    --accent: #f39c12;
+    --light: #f4f7f6;
+    --white: #ffffff;
+    --text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--white);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--primary);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--accent); }
+
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 2rem; }
+.nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; }
+
+/* Buttons */
+.btn-primary { background: var(--accent); color: white; padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; border: none; cursor: pointer; }
+.btn-secondary { border: 2px solid white; color: white; padding: 0.7rem 1.5rem; border-radius: 5px; text-decoration: none; margin-right: 1rem; }
+
+/* Sections & Grid */
+.section { padding: 5rem 10%; }
+.section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    background: var(--light);
+    border-top: 5px solid var(--accent);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hardware-bg { background-color: var(--primary); color: white; }
+.hardware-list { list-style: none; margin: 2rem 0; }
+.hardware-list li { margin-bottom: 0.5rem; }
+
+/* Forms */
+form { display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; }
+form input, form select, form textarea { margin-bottom: 1rem; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
+footer { text-align: center; padding: 2rem; background: #050c16; color: white; }
